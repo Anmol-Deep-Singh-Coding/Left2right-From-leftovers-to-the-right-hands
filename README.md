@@ -32,7 +32,7 @@
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/foodlink.git
+   git clone https://github.com/Anmol-Deep-Singh-Coding/Left2Righ.git
    ```
 
 2. **Start XAMPP**
