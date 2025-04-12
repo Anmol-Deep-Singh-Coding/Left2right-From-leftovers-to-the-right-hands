@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submit Food</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 360px;
+      animation: popIn 0.6s ease;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #2563eb;
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>🥘 Submit Leftover Food</h2>
+  <form id="form">
+    <input type="text" id="name" placeholder="Restaurant Name" required>
+    <input type="text" id="food" placeholder="Food Description" required>
+    <input type="number" id="quantity" placeholder="Quantity (units)" required>
+    <input type="date" id="expiry" required>
+    <input type="text" id="address" placeholder="Shop Address" required>
+    <button type="submit">🚀 Submit</button>
+  </form>
+</div>
+
+<script>
+  const apiKey = "pk.a2bc8f0c2c97d7e8e1048a4f221b47be";
+
+  document.getElementById('form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const address = document.getElementById('address').value;
+
+    try {
+      const geoRes = await fetch(`https://us1.locationiq.com/v1/search.php?key=${apiKey}&q=${encodeURIComponent(address)}&format=json`);
+      const geoData = await geoRes.json();
+
+      if (!geoData[0]) {
+        alert("Location not found.");
+        return;
+      }
+
+      const lat = geoData[0].lat;
+      const lon = geoData[0].lon;
+
+      const formData = new FormData();
+      formData.append('name', document.getElementById('name').value);
+      formData.append('food', document.getElementById('food').value);
+      formData.append('quantity', document.getElementById('quantity').value);
+      formData.append('expiry', document.getElementById('expiry').value);
+      formData.append('latitude', lat);
+      formData.append('longitude', lon);
+
+      const response = await fetch('http://localhost/food-sharing-api/submit_restaurant.php', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.text();
+      alert(result);
+      document.getElementById('form').reset();
+    } catch (err) {
+      alert("Submission failed.");
+      console.error(err);
+    }
+  });
+</script>
+
+</body>
+</html>

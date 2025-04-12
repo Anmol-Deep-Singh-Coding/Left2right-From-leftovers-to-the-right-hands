@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate Food - Leftover Connect</title>
+  <link rel="stylesheet" href="donor.css" />
+</head>
+<body>
+  <header class="hero" style="height: auto; background: url('bg.jpg') center/cover no-repeat;">
+    <nav>
+      <h1>LeftoverConnect</h1>
+      <a href="#">Logout</a>
+    </nav>
+    <div class="hero-text" style="margin-top: 30px;">
+      <h2>Donate Your Surplus Food</h2>
+      <p>Fill out the form below to help someone in need.</p>
+    </div>
+  </header>
+
+  <section class="info" style="background: #fff; flex-direction: column; text-align: center;">
+    <form style="max-width: 600px; width: 100%; margin: 0 auto;">
+      <div style="margin-bottom: 15px; text-align: left;">
+        <label>Food Item Name</label>
+        <input type="text" placeholder="e.g. Veg Biryani" required style="width: 100%; padding: 10px; margin-top: 5px;">
+      </div>
+
+      <div style="margin-bottom: 15px; text-align: left;">
+        <label>Quantity (in servings or kgs)</label>
+        <input type="text" placeholder="e.g. 10 servings" required style="width: 100%; padding: 10px; margin-top: 5px;">
+      </div>
+
+      <div style="margin-bottom: 15px; text-align: left;">
+        <label>Best Before (in hours)</label>
+        <input type="number" placeholder="e.g. 6" required style="width: 100%; padding: 10px; margin-top: 5px;">
+      </div>
+
+      <div style="margin-bottom: 15px; text-align: left;">
+        <label>Pickup Address</label>
+        <textarea placeholder="Complete pickup address" required style="width: 100%; padding: 10px; margin-top: 5px;"></textarea>
+      </div>
+
+      <div style="margin-bottom: 15px; text-align: left;">
+        <label>Special Instructions (if any)</label>
+        <textarea placeholder="Optional" style="width: 100%; padding: 10px; margin-top: 5px;"></textarea>
+      </div>
+
+      <div style="margin-bottom: 15px; text-align: left;">
+        <label>Upload Image (optional)</label><br/>
+        <input type="file" accept="image/*" style="margin-top: 10px;">
+      </div>
+
+      <button type="submit" style="background-color: tomato; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer;">
+        Submit
+      </button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Leftover Connect | Together we make a difference.</p>
+  </footer>
+</body>
+</html>
