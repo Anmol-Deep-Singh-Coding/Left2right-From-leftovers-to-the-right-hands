@@ -5,6 +5,29 @@
 
 ---
 
+## 🧠 Project Overview
+
+**Theme:** Community Building  
+**Project Duration:** 7 Hours  
+**Team Size:** 4 Members  
+**Technology Stack:** HTML, CSS, JavaScript, PHP (XAMPP), MySQL
+
+---
+
+## ✨ Key Features
+
+- 🔐 **User Authentication**: Secure login and registration for all users
+- 👤 **Role-Specific Registration**:
+  - **Donors**: Provide organization name, address, and donation availability
+  - **Recipients**: Provide personal details and food requirements
+  - **Volunteers**: Provide basic contact info to assist in food delivery
+- 🌍 **Dynamic Interface**: Visually appealing background image slideshow and motivational quotes
+- 📱 **Responsive & Scrollable Forms**: Adapts to screen size; smooth transitions between role-based fields
+- 🛡️ **Input Validations**: Unique mobile numbers; proper format for phone, email, and password
+
+---
+
+
 ## 🔧 Setup Instructions
 
 1. **Clone the Repository**
@@ -42,25 +65,6 @@
 ## 🔍 Working of the Hack
 
 FoodLink acts as a bridge between food donors, NGOs, and volunteers. Users register with roles — Donor, Recipient (NGO), or Volunteer. Donors provide food availability, NGOs submit requests, and volunteers assist with delivery. The system is mobile-friendly, responsive, and includes proper validation to ensure data quality and smooth operations.
-
----
-
-## 🧠 Project Overview
-
-- **Theme**: Community Building  
-- **Duration**: 7 Hours  
-- **Team Size**: 4 Members  
-- **Tech Stack**: HTML, CSS, JS, PHP (XAMPP), MySQL
-
----
-
-## ✨ Key Features
-
-- 🔐 Secure role-based authentication
-- 👥 Donor, NGO, and Volunteer-specific registration
-- 🌄 Dynamic image slideshow with motivational quotes
-- 📱 Responsive and scrollable forms
-- 🛡 Input validations (email, phone, password)
 
 ---
 
