@@ -1,14 +1,14 @@
 
-# 🍽 FoodLink – Share a Meal, Spread a Smile
+# 🍽 Left2Right – From leftover to the right hands
 
-*FoodLink* is a community-driven web platform designed to connect food donors, recipients (NGOs), and volunteers for the purpose of reducing food waste and supporting the hungry. Built using HTML, CSS, JavaScript, PHP, and MySQL (XAMPP).
+*Left2Right* is a community-driven web platform designed to connect food donors, recipients (NGOs), and volunteers for the purpose of reducing food waste and supporting the hungry. Built using HTML, CSS, JavaScript, PHP, and MySQL (XAMPP).
 
 ---
 
 ## 🧠 Project Overview
 
 **Theme:** Community Building  
-**Project Duration:** 7 Hours  
+**Project Duration:** 12 Hours  
 **Team Size:** 4 Members  
 **Technology Stack:** HTML, CSS, JavaScript, PHP (XAMPP), MySQL
 
@@ -31,8 +31,9 @@
 ## 🔧 Setup Instructions
 
 1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/Anmol-Deep-Singh-Coding/Left2Righ.git
+   ```
+   https://github.com/Anmol-Deep-Singh-Coding/Left2right-From-leftovers-to-the-right-hands
+  
    ```
 
 2. **Start XAMPP**
@@ -64,7 +65,7 @@
 
 ## 🔍 Working of the Hack
 
-FoodLink acts as a bridge between food donors, NGOs, and volunteers. Users register with roles — Donor, Recipient (NGO), or Volunteer. Donors provide food availability, NGOs submit requests, and volunteers assist with delivery. The system is mobile-friendly, responsive, and includes proper validation to ensure data quality and smooth operations.
+Left2Right acts as a bridge between food donors, NGOs, and volunteers. Users register with roles — Donor, Recipient (NGO), or Volunteer. Donors provide food availability, NGOs submit requests, and volunteers assist with delivery. The system is mobile-friendly, responsive, and includes proper validation to ensure data quality and smooth operations.
 
 ---
 
@@ -142,14 +143,10 @@ FoodQuality and Hunger/
 |-------------|------------------|
 | Abhishek    | Full Stack Dev   |
 | Anmol       | UI/UX Designer   |
-| Aadit       | PHP & DB Dev     |
-| Ankit       | Volunteer Module |
+| Aadit       | Full Stack Dev   |
+| Ankit       | Backend Dev      |
 
 ---
 
-## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
-
----
 
