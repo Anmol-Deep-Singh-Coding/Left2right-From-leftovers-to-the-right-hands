@@ -71,29 +71,42 @@ FoodLink acts as a bridge between food donors, NGOs, and volunteers. Users regis
 ## 📁 Folder Structure
 
 ```
-foodlink/
+FoodQuality and Hunger/
 │
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── script.js
-│   └── images/
-│       ├── bg1.jpg
-│       ├── bg2.jpg
-│       └── bg3.jpg
+├── CSS/
+│   ├── Login_signUp.css
+│   ├── donor.css
+│   ├── donordash.css
+│   └── style.css
 │
-├── db/
-│   └── foodlink.sql
+├── HTML/
+│   ├── FeedBack_Page.html
+│   ├── Home_page.html
+│   ├── SignUp_and_Login_Page.html
+│   ├── donor.html
+│   ├── donordash.html
+│   ├── ngo_map.html
+│   ├── submit_restaurant.html
+│   └── thank_youpage.html
 │
-├── includes/
-│   ├── config.php
+├── IMAGES/
+│   ├── bg.jpg
+│   ├── bg1.jpg
+│   ├── bg2.jpg
+│   ├── bg3.jpg
+│   ├── delivery.jpeg
+│   ├── pickup.jpeg
+│   └── share-food.jpeg
+│
+├── PHP/
+│   ├── get_restaurants.php
+│   ├── login.php
 │   ├── register.php
-│   └── login.php
+│   ├── submit_form.php
+│   └── submit_restaurant.php
 │
-├── index.html
-├── dashboard.php (optional)
 └── README.md
+
 ```
 
 ---
