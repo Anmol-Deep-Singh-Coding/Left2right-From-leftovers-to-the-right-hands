@@ -72,41 +72,39 @@ Left2Right acts as a bridge between food donors, NGOs, and volunteers. Users reg
 ## 📁 Folder Structure
 
 ```
-FoodQuality and Hunger/
+Food Quality and Hunger/
 │
-├── CSS/
-│   ├── Login_signUp.css
-│   ├── donor.css
-│   ├── donordash.css
-│   └── style.css
-│
-├── HTML/
-│   ├── FeedBack_Page.html
-│   ├── Home_page.html
-│   ├── SignUp_and_Login_Page.html
-│   ├── donor.html
-│   ├── donordash.html
-│   ├── ngo_map.html
-│   ├── submit_restaurant.html
+├── Feedback Page/
+│   ├── feedback.html
+│   ├── submit_form.php
 │   └── thank_youpage.html
 │
-├── IMAGES/
+├── Home Page/
+│   ├── Feedback Page/
+│   ├── Login and Sign-up Page/
 │   ├── bg.jpg
-│   ├── bg1.jpg
-│   ├── bg2.jpg
-│   ├── bg3.jpg
 │   ├── delivery.jpeg
+│   ├── index.html
 │   ├── pickup.jpeg
-│   └── share-food.jpeg
+│   ├── script.js
+│   ├── share-food.jpeg
+│   └── style.css
 │
-├── PHP/
-│   ├── get_restaurants.php
+├── Login and Sign-up Page/
+│   ├── images/
 │   ├── login.php
-│   ├── register.php
-│   ├── submit_form.php
+│   └── register.php
+│
+├── Posting Page/
+│   ├── db.php
+│   ├── get_restaurants.php
+│   ├── ngo_map.html
+│   ├── submit_restaurant.html
 │   └── submit_restaurant.php
 │
+├── db.php
 └── README.md
+
 
 ```
 
