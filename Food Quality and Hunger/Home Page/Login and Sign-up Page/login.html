@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FoodLink – Login / Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="homestyle.css">
+  
+</head>
+<body>
+
+  <!-- Background slideshow -->
+  <div class="background">
+    <img src="images/bg1.jpg" class="active">
+    <img src="images/bg2.jpg">
+    <img src="images/bg3.jpg">
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Quote -->
+  <div class="quote">“Share a meal, spread a smile.”</div>
+
+  <!-- Form -->
+  <div class="form-container">
+    <div class="form-box">
+      <h2 id="formTitle">Login to FoodLink</h2>
+      <form id="authForm" method="POST" action="login.php" novalidate>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        
+        <div id="roleSelect" class="hidden">
+          <select name="role" id="roleDropdown" required>
+            <option value="">-- Select Role --</option>
+            <option value="donor">Donor</option>
+            <option value="recipient">Recipient</option>
+            <option value="volunteer">Volunteer</option>
+          </select>
+
+          <div id="extraFields" class="hidden">
+            <!-- Donor/Recipient Fields -->
+            <div id="donorRecipientFields">
+              <input type="text" name="location" placeholder="Location">
+              <input type="text" name="organisation" placeholder="Organisation Name">
+              <input type="text" name="address" placeholder="Address">
+              <input type="text" name="mobile" placeholder="Mobile Number">
+            </div>
+
+            <!-- Volunteer Fields -->
+            <div id="volunteerFields" class="hidden">
+              <input type="text" name="full_name" placeholder="Full Name">
+              <input type="text" name="occupation" placeholder="Occupation">
+              <input type="text" name="volunteer_mobile" placeholder="Mobile Number">
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" id="submitBtn">Login</button>
+      </form>
+      <div class="toggle-link" onclick="toggleForm()">Don't have an account? Register here</div>
+    </div>
+  </div>
+
+  <script>
+    const images = document.querySelectorAll(".background img");
+    let current = 0;
+    setInterval(() => {
+      images[current].classList.remove("active");
+      current = (current + 1) % images.length;
+      images[current].classList.add("active");
+    }, 4000);
+
+    let isRegister = false;
+
+    function toggleForm() {
+      const formTitle = document.getElementById("formTitle");
+      const roleSelect = document.getElementById("roleSelect");
+      const form = document.getElementById("authForm");
+      const submitBtn = document.getElementById("submitBtn");
+      const toggle = document.querySelector(".toggle-link");
+
+      if (!isRegister) {
+        formTitle.textContent = "Register to FoodLink";
+        form.action = "register.php";
+        roleSelect.classList.remove("hidden");
+        submitBtn.textContent = "Register";
+        toggle.textContent = "Already have an account? Login here";
+      } else {
+        formTitle.textContent = "Login to FoodLink";
+        form.action = "login.php";
+        roleSelect.classList.add("hidden");
+        submitBtn.textContent = "Login";
+        toggle.textContent = "Don't have an account? Register here";
+      }
+
+      isRegister = !isRegister;
+    }
+
+    document.getElementById("roleDropdown").addEventListener("change", function () {
+      const extraFields = document.getElementById("extraFields");
+      const volunteerFields = document.getElementById("volunteerFields");
+      const donorRecipientFields = document.getElementById("donorRecipientFields");
+
+      const role = this.value;
+
+      if (role === "volunteer") {
+        extraFields.classList.remove("hidden");
+        volunteerFields.classList.remove("hidden");
+        donorRecipientFields.classList.add("hidden");
+      } else if (role === "donor" || role === "recipient") {
+        extraFields.classList.remove("hidden");
+        donorRecipientFields.classList.remove("hidden");
+        volunteerFields.classList.add("hidden");
+      } else {
+        extraFields.classList.add("hidden");
+        donorRecipientFields.classList.add("hidden");
+        volunteerFields.classList.add("hidden");
+      }
+    });
+  </script>
+</body>
+</html>

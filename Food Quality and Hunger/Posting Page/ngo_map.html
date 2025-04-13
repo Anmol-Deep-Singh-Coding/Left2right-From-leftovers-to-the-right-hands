@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NGO Food Map</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      background: #3b82f6;
+      padding: 20px;
+      color: white;
+      text-align: center;
+      font-size: 28px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      animation: slideDown 0.5s ease-in-out;
+    }
+
+    #map {
+      height: 500px;
+      width: 90%;
+      margin: 30px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      animation: fadeIn 1s ease;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+    }
+
+    .restaurant-list {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+
+    .restaurant-item {
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+      transition: background 0.3s;
+    }
+
+    .restaurant-item:hover {
+      background: #f9fafb;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<header>🍱 NGO Food Map – Real-time Leftovers</header>
+
+<div class="container">
+  <div id="map"></div>
+
+  <div class="restaurant-list">
+    <h3>📍 Nearby Restaurants</h3>
+    <div id="restaurant-list"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([30.7333, 76.7794], 12);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors',
+    maxZoom: 19
+  }).addTo(map);
+
+  fetch('http://localhost/Food Quality and Hunger/Posting Page/get_restaurants.php')
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(item => {
+        const marker = L.marker([item.latitude, item.longitude]).addTo(map);
+        marker.bindPopup(`
+          <b>${item.name}</b><br>
+          Food: ${item.food}<br>
+          Quantity: ${item.quantity}<br>
+          Expiry: ${item.expiry}
+        `);
+
+        const listItem = document.createElement('div');
+        listItem.classList.add('restaurant-item');
+        listItem.innerHTML = `
+          <b>${item.name}</b><br>
+          Food: ${item.food}<br>
+          Quantity: ${item.quantity}<br>
+          Expiry: ${item.expiry}
+        `;
+        document.getElementById('restaurant-list').appendChild(listItem);
+      });
+    })
+    .catch(err => {
+      alert("Error fetching restaurant data.");
+      console.error(err);
+    });
+</script>
+
+</body>
+</html>

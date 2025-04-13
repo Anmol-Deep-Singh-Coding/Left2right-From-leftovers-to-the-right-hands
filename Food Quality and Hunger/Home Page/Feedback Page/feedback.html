@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback - Food Quality & Hunger</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefefe;
+      color: #2e2e2e;
+    }
+  
+    .container {
+      max-width: 780px;
+      margin: 50px auto;
+      padding: 40px;
+      background: #fffaf5;
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.07);
+      border: 1px solid #f0e6e0;
+      animation: slideIn 0.8s ease-in-out;
+    }
+  
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  
+    h2, h3 {
+      color: #d35400;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    h4{
+                font-size: 20px;
+                color: #d35400;
+                text-align: left;
+                margin-bottom: 10px;
+        }
+  
+    p {
+      text-align: justify;
+      font-size: 16.5px;
+      line-height: 1.7;
+      color: #444;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    label {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #5a3323;
+    }
+  
+    label span {
+      color: #e74c3c;
+    }
+  
+    input, textarea, select {
+      padding: 12px 14px;
+      margin-top: 8px;
+      border-radius: 8px;
+      border: 1px solid #dcd1cb;
+      font-size: 15px;
+      background: #fffdfc;
+      transition: all 0.3s ease;
+    }
+  
+    input:focus, textarea:focus {
+      border-color: #d35400;
+      outline: none;
+      box-shadow: 0 0 5px rgba(211, 84, 0, 0.2);
+    }
+  
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+  
+    button {
+      margin-top: 30px;
+      padding: 14px;
+      background-color: #e67e22;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    button:hover {
+      background-color: #ca6110;
+    }
+  
+    .contact-info {
+      margin-top: 45px;
+      background: #fff1e5;
+      padding: 25px;
+      border-left: 5px solid #d35400;
+      border-radius: 10px;
+    }
+  
+    .email-list {
+      margin-top: 10px;
+      font-size: 15.5px;
+      line-height: 1.6;
+      color: #5e3c30;
+    }
+  
+    .email-list span {
+      display: block;
+    }
+  
+    .rating {
+      direction: ltr;
+      display: flex;
+      gap: 6px;
+      margin-top: 10px;
+    }
+  
+    .rating input {
+      display: none;
+    }
+  
+    .rating label {
+      font-size: 28px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s ease, transform 0.2s;
+    }
+  
+    .rating input:checked ~ label,
+    .rating input:hover ~ label,
+    .rating label:hover,
+    .rating label:hover ~ label {
+      color: #f4c542;
+      transform: scale(1.1);
+    }
+  
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px;
+        margin: 20px;
+      }
+  
+      button {
+        font-size: 15px;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <h2><u><b>Feedback Form</b></u></h2>
+    <h4>Our Mission</h4>
+    <div style="margin-bottom: 30px;">
+      
+      <p>
+        At <strong>FoodAid Initiative</strong>, we are dedicated to ensuring that every individual has access to safe, nutritious, and sufficient food. 
+        Our mission is to combat hunger by creating sustainable food distribution systems and raising awareness about food quality. Whether it's through 
+        community kitchens, food donation drives, or educational programs, we strive to eliminate hunger while promoting a culture of responsibility, empathy, 
+        and care. Your feedback helps us grow and serve better—because every voice matters in the fight against hunger.
+      </p>
+    </div>
+    <form action="submit_form.php" method="post">
+      <label>Your Name <span>*</span></label>
+      <input type="text" name="name" required />
+    
+      <label>Email <span>*</span></label>
+      <input type="email" name="email" required />
+    
+      <label>Phone Number</label>
+      <input type="text" name="phone" />
+    
+      <label>Your Message</label>
+      <textarea name="message"></textarea>
+    
+      <label>Rate your experience</label>
+      <div class="rating">
+        <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
+        <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
+        <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
+        <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
+        <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
+      </div>
+    
+      <button type="submit">Submit</button>
+    </form>
+    
+    <div class="contact-info">
+      <h3>Contact Us</h3>
+      <p>If you have any questions or would like to reach us directly, feel free to email us:</p>
+      <div class="email-list">
+        <span>📧 AnmolDeepSingh@gmail.com</span>
+        <span>📧 AnkitChakroborty@gmail.com</span>
+        <span>📧 AaditAggarwaal@gmail.com</span>
+        <span>📧 AbhishekMahato@gmail.com</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

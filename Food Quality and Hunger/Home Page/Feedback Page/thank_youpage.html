@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You for Your Feedback</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefefe;
+      color: #2e2e2e;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 50px auto;
+      padding: 40px;
+      background: #fffaf5;
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.07);
+      border: 1px solid #f0e6e0;
+      animation: slideIn 0.8s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: #d35400;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 16.5px;
+      line-height: 1.7;
+      color: #444;
+      margin-top: 30px;
+    }
+
+    .back-btn {
+      display: block;
+      width: 200px;
+      margin: 30px auto;
+      padding: 12px;
+      background-color: #e67e22;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #ca6110;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Thank You for Your Feedback!</h2>
+    <p>Your response has been successfully submitted. We appreciate your time and effort in helping us improve the quality of our services. If you have any further questions or comments, feel free to contact us!</p>
+    
+    <button class="back-btn" onclick="window.location.href='index.html'">Back to Home</button>
+  </div>
+</body>
+</html>
