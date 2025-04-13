@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Volunteer Dashboard - LeftoverConnect</title>
+  <link rel="stylesheet" href="voldash.css" />
+  <script src="voldash.js"></script> 
+  
+  <!-- MapLibre and LocationIQ libraries -->
+  <link href="https://tiles.locationiq.com/v3/libs/maplibre-gl/1.15.2/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://tiles.locationiq.com/v3/libs/maplibre-gl/1.15.2/maplibre-gl.js"></script>
+</head>
+<body>
+  <header class="volunteer-header">
+    <h1>Welcome, Volunteer!</h1>
+    <p>Available Pickup Requests Near You</p>
+  </header>
+
+  <main class="pickup-list">
+    <!-- Pickup Card 1 -->
+    <div class="pickup-card">
+      <h3>Food from FoodieHub Restaurant</h3>
+      <p><strong>Location:</strong> Connaught Place, Delhi</p>
+      <p><strong>Contact:</strong> 9876543210</p>
+      <p><strong>Quantity:</strong> 20 meal boxes</p>
+      
+      <!-- Interactive Map for Pickup 1 -->
+      <div class="map" id="map1" style="height: 300px;"></div>
+      <button class="accept-btn">Accept Pickup</button>
+    </div>
+
+    <!-- Pickup Card 2 -->
+    <div class="pickup-card">
+      <h3>Leftovers from Fresh Bites Event</h3>
+      <p><strong>Location:</strong> Andheri West, Mumbai</p>
+      <p><strong>Contact:</strong> 9123456780</p>
+      <p><strong>Quantity:</strong> 50 snack packs</p>
+      
+      <!-- Interactive Map for Pickup 2 -->
+      <div class="map" id="map2" style="height: 300px;"></div>
+      <button class="accept-btn">Accept Pickup</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Leftover Connect | Built with ❤️ during Hackathon</p>
+  </footer>
+
+</body>
+</html>

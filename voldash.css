@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.volunteer-header {
+  background: linear-gradient(to right, #00a86b, #00ffff);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.volunteer-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.volunteer-header p {
+  font-size: 1.2rem;
+}
+
+/* Pickup List */
+.pickup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Card Styles */
+.pickup-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #00a86b;
+}
+
+.pickup-card h3 {
+  color: #00a86b;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.pickup-card p {
+  margin: 6px 0;
+}
+
+.map img {
+  margin: 15px 0;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #00ffff;
+}
+
+/* Button */
+.accept-btn {
+  background-color: #00a86b;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.accept-btn:hover {
+  background-color: #008f5a;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #aaa;
+  margin-top: 30px;
+}
