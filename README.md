@@ -2,7 +2,7 @@
 # 🍽 Left2Right – From leftover to the right hands
 
 *Left2Right* is a community-driven web platform designed to connect food donors, recipients (NGOs), and volunteers for the purpose of reducing food waste and supporting the hungry. Built using HTML, CSS, JavaScript, PHP, and MySQL (XAMPP).
-
+HIIII
 ---
 
 ## 🧠 Project Overview
